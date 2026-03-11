@@ -2,6 +2,7 @@ package com.apps.address_book;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -39,5 +40,13 @@ public class ContactController {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No contact to update");
 		}
 		return ResponseEntity.ok(service.updateContact(updatedContact));
+	}
+
+	@DeleteMapping
+	public ResponseEntity<String> deleteContact() {
+		if (service.deleteContact()) {
+			return ResponseEntity.ok("Contact deleted successfully");
+		}
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No contact to delete");
 	}
 }

@@ -28,4 +28,12 @@ public class ContactService {
 		}
 		return this.contact;
 	}
+
+	public boolean deleteContact() {
+		if (this.contact != null) {
+			this.contact = null;
+			return true;
+		}
+		return false;
+	}
 }
