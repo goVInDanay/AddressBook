@@ -14,4 +14,18 @@ public class ContactService {
 	public Contacts getContact() {
 		return contact;
 	}
+
+	public Contacts updateContact(Contacts updatedContact) {
+		if (this.contact != null) {
+			this.contact.setFirstName(updatedContact.getFirstName());
+			this.contact.setLastName(updatedContact.getLastName());
+			this.contact.setAddress(updatedContact.getAddress());
+			this.contact.setCity(updatedContact.getCity());
+			this.contact.setState(updatedContact.getState());
+			this.contact.setZip(updatedContact.getZip());
+			this.contact.setPhoneNumber(updatedContact.getPhoneNumber());
+			this.contact.setEmail(updatedContact.getEmail());
+		}
+		return this.contact;
+	}
 }
