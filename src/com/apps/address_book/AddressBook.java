@@ -16,4 +16,12 @@ public class AddressBook {
 	public Contacts getContact() {
 		return contact;
 	}
+
+	public boolean editContact(String name, Contacts updatedContact) {
+		if (contact.getFirstName().equalsIgnoreCase(name) || contact.getLastName().equalsIgnoreCase(name)) {
+			contact = updatedContact;
+			return true;
+		}
+		return false;
+	}
 }
