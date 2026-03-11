@@ -78,11 +78,20 @@ public class AddressBookMain {
 
 		updatedContact = updatedBuilder.build();
 		if (addressBook.editContact(name, updatedContact)) {
-			System.out.println("Updated Contact");
+			System.out.println("\nUpdated Contact");
 		} else {
-			System.out.println("Contact not found");
+			System.out.println("\nContact not found");
 		}
-		sc.close();
 
+		System.out.println("\nDelete Contact");
+		System.out.println("Enter first name or last name to delete contact");
+		String name2 = sc.nextLine();
+		if (addressBook.deleteContact(name2)) {
+			System.out.println("\nDeleted Contact");
+		} else {
+			System.out.println("\nContact not found");
+		}
+
+		sc.close();
 	}
 }
