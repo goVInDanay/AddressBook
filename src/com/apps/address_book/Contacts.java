@@ -10,6 +10,10 @@ public class Contacts {
 	private String phoneNumber;
 	private String email;
 
+	public Contacts() {
+
+	}
+
 	private Contacts(ContactBuilder builder) {
 		this.firstName = builder.firstName;
 		this.lastName = builder.lastName;
