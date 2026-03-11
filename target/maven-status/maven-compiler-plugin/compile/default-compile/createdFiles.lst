@@ -1,7 +1,0 @@
-com\apps\address_book\Contacts.class
-com\apps\address_book\AddressBookMain.class
-com\apps\address_book\AddressBook.class
-com\apps\address_book\ContactService.class
-com\apps\address_book\Contacts$ContactBuilder.class
-com\apps\address_book\AddressBookApp.class
-com\apps\address_book\ContactController.class
